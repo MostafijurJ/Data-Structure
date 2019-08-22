@@ -39,6 +39,7 @@ void RemoveDuplicate(){
             prev->next=current->next;
             node* temp=current;
             delete(temp);
+            current=prev;
         }
     }
 }
@@ -54,9 +55,12 @@ void Print(){
 
 int main()
 {
+    Insert(2);
     Insert(3);
     Insert(3);
-    Insert(5);
+    Insert(3);
+    Insert(3);
+    Insert(7);
     Insert(7);
     Insert(7);
     RemoveDuplicate();
