@@ -12,7 +12,7 @@ void init(double d){
 
 double getArea(double x,double y,double z){
     double p=(x+y+z)/2.0;
-    double s=p*abs(p-x)*abs(p-y)*abs(p-z);
+    double s=p*(p-x)*(p-y)*(p-z);
     double area=pow(s,.5);
     return area;
 }
@@ -46,8 +46,8 @@ double binarySearch(double l,double h,double r){
 
 int main()
 {
-    //freopen("input.txt","r",stdin);
-    //freopen("output.txt","w",stdout);
+    freopen("input.txt","r",stdin);
+    freopen("output.txt","w",stdout);
     int t;
     scanf("%d",&t);
 
