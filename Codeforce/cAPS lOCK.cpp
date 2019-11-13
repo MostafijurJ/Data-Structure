@@ -36,6 +36,9 @@ int main()
         if(s[0]>='a' && s[0]<='z'){
             s[0]=char('A'+(s[0]-'a'));
         }
+        else{
+            s[0]=char('a'+(s[0]-'A'));
+        }
         cout<<s<<endl;
     }
     else{
