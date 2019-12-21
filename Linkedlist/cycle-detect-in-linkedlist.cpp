@@ -43,16 +43,24 @@ bool hasCycle(){
 
 bool isCycle()
 {
-    node* slow,*fast;
-    slow = root;
-    fast = root->next;
-    while(
-          fast->next!=NULL)
+    if(root==NULL)
     {
-        if(fast==slow)
+        return false;
+    }
+
+    node* slow=root;
+    node* fast=root;
+
+    while(slow && fast && fast->next)
+    {
+        slow=slow->next;
+        fast=fast->next->next;
+
+        if(slow==fast)
+        {
+            cout<<"Has cycle"<<endl;
             return true;
-        slow = slow->next;
-        fast = fast->next->next;
+        }
     }
     return false;
 }
